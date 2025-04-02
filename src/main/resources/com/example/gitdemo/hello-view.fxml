@@ -3,15 +3,45 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" spacing="20.0" style="-fx-background-color: magenta;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="com.example.gitdemo.HelloController">
+<VBox alignment="CENTER" prefHeight="361.0" prefWidth="288.0" spacing="20.0" style="-fx-background-color: #091079;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gitdemo.HelloController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-   <Label text="Pandan G" textFill="WHITE" />
-   <TextField />
-   <PasswordField />
+   <Label text="Login" textFill="WHITE">
+      <font>
+         <Font size="42.0" />
+      </font>
+      <VBox.margin>
+         <Insets top="-20.0" />
+      </VBox.margin>
+   </Label>
+   <TextField promptText="Username" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 20;">
+      <font>
+         <Font size="15.0" />
+      </font></TextField>
+   <PasswordField promptText="Password" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 20;">
+      <font>
+         <Font size="15.0" />
+      </font></PasswordField>
+   <Hyperlink text="Forgot Password?" textFill="#3e5df5">
+      <VBox.margin>
+         <Insets right="-135.0" top="-22.0" />
+      </VBox.margin>
+   </Hyperlink>
 
     <Label fx:id="welcomeText" />
-    <Button onAction="#onHelloButtonClick" text="Hello!" />
+    <Button onAction="#onHelloButtonClick" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: transparent; -fx-border-color: #65dd44; -fx-border-radius: 20;" text="Login" textFill="#65dd44">
+      <VBox.margin>
+         <Insets top="-51.0" />
+      </VBox.margin>
+      <font>
+         <Font size="15.0" />
+      </font></Button>
+   <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="262.0" style="-fx-background-color: black; -fx-background-radius: 20;" text="or Login with Google" textFill="WHITE">
+      <font>
+         <Font size="15.0" />
+      </font>
+   </Button>
 </VBox>
